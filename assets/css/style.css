@@ -1,0 +1,51 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-color: #3461af;
+}
+
+header {
+    padding-top: 5em;
+}
+
+.pokeWidth {
+    width: 300px;
+    height: auto;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffcb05;
+    border: none;
+    color: #000000;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 0px 0px #b09600;
+}
+
+button:hover {
+    background-color: #ffea68;
+    box-shadow: 0px 3px 0px 0px #b09600;
+    cursor: pointer;
+}
+
+input {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    color: #000000;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+  
+  input:focus {
+    outline: none;
+    box-shadow: 0px 3px 0px 0px #ffcb05, 0px 0px 5px 0px rgba(0,0,0,0.5);
+  }
+  
