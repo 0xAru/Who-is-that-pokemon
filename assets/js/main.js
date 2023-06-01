@@ -12,6 +12,7 @@ function randomPoke() {
         .then(data => {
             data.json()
                 .then(poke => {
+                    console.log(poke);
                     currentPoke = poke;
                     let img = document.createElement("img");
                     img.classList.add("pokeWidth")
