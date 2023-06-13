@@ -1,5 +1,7 @@
 let currentPoke = null;
 let container = document.querySelector(".container");
+let next = document.querySelector('.next');
+let para = document.querySelector(".para");
 
 function random() {
     return Math.floor(Math.random() * 150) + 1;
@@ -12,7 +14,6 @@ function randomPoke() {
         .then(data => {
             data.json()
                 .then(poke => {
-                    console.log(poke);
                     currentPoke = poke;
                     let img = document.createElement("img");
                     img.classList.add("pokeWidth")
@@ -29,26 +30,18 @@ answer.addEventListener("click", () => {
 })
 
 async function pokemon() {
-    let container = document.querySelector(".container");
     let userAnswer = document.querySelector("#guess").value;
-    let para = document.createElement("p");
     
     if (userAnswer.toLowerCase() == currentPoke.name.toLowerCase()){
         para.innerHTML = "C'est ça, bien joué !";
-        next = document.createElement("button");
-        next.innerHTML = "Suivant";
     } else {
         para.innerHTML = "Hahaha tu t'es trompé !";
-        next = document.createElement("button");
-        next.innerHTML = "Suivant";
     }
-
-    container.appendChild(para);
-    container.appendChild(next);
-    console.log(currentPoke);
-
-    
-    next.addEventListener("click", () => {
-        randomPoke();
-    })
+    next.style.display = "block";
 }
+
+next.addEventListener("click", () => {
+    para.innerHTML = "";
+    next.style.display = "none";
+    randomPoke();
+})
